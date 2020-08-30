@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block title %} Seja Bem vindo {% endblock %}
+{% block main %}
+
+
+
+    <div class="row">
+        <div class="col">
+
+        </div>
+
+        <div class="col-6">
+            <h3>SEJA BEM VINDO A LISTA CADASTRAL</h3>
+               <ul class="list-group" >
+                {% for person in persons %}
+                    <li class="list-group-item">
+                        <a href="{% url 'persons_update' person.id %}">{{ person.nome }} {{ person.sobrenome }} </a>
+                        <a href="{% url 'persons_delete' person.id %}">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                {% endfor %}
+                </ul>
+                <br>
+                 <a href="{% url 'person_new' %}"class="btn btn-primary">Cadastrar</a>
+
+
+
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+
+    {% endblock %}
