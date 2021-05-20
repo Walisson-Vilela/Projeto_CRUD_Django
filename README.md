@@ -1,4 +1,5 @@
-# Teste_e-Soft
+# Projeto CRUD
+
 Criação de um sistema WEB para cadastro de pessoas em uma lista no banco de dados.
 
 Para acesso a aplicação, o endereço web é http://127.0.0.1:8000/person/list/
